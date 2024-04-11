@@ -9,5 +9,5 @@ package Inventario;
  * @author david
  */
 public class Literatura {
-    
+    int comida;
 }
