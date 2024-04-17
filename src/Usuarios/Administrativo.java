@@ -9,5 +9,5 @@ package Usuarios;
  * @author guillermo
  */
 public class Administrativo {
-    
+    //Hola
 }
