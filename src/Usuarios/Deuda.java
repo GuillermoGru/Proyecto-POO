@@ -4,10 +4,12 @@
  */
 package Usuarios;
 
+import Inventario.Fecha;
+
 /**
  *
  * @author guillermo
  */
-public class Deuda {
-    
+public interface Deuda{
+    double calcularDeuda(Fecha fechaActual);
 }

@@ -4,10 +4,27 @@
  */
 package Usuarios;
 
+import Inventario.Fecha;
+import Inventario.Recurso;
+import java.util.ArrayList;
+
 /**
  *
  * @author guillermo
  */
-public class Normal {
+public class Normal extends Usuario{
+
+    public Normal(int nombre, int claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
+        super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
+    }
+    
+    public double calcularDeuda(Fecha fechaActual){
+        double deudaTotal = 0;
+        for(int i = 0; i < librosPrestados.size(); i++){
+            
+        }
+        
+        return deudaTotal;
+    }
     
 }
