@@ -8,6 +8,25 @@ package Inventario;
  *
  * @author david
  */
-public class Literatura {
-    int comida;
+public class Literatura extends Recurso{
+    String editorial;
+
+    public Literatura(String titulo, String autores, Fecha fechaPublicacion, String descripcion, int numSerieLocal, boolean disponible, Fecha fechaPrestamo, String editorial) {
+        super(titulo, autores, fechaPublicacion, descripcion, numSerieLocal, disponible, fechaPrestamo);
+        this.editorial = editorial;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Editorial = " + editorial;
+    } 
+    
 }
