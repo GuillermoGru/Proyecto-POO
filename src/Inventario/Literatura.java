@@ -6,8 +6,8 @@ package Inventario;
 
 /**
  *
- * @author guillermo
+ * @author david
  */
-public class Biblioteca {
+public class Literatura {
     
 }
