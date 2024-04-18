@@ -4,10 +4,30 @@
  */
 package Usuarios;
 
+import Inventario.Recurso;
+import java.util.ArrayList;
+import Inventario.Fecha;
+
 /**
  *
  * @author guillermo
  */
-public class Administrativo {
-    //Hola
+public class Administrativo extends Usuario {
+
+    public Administrativo(int nombre, int claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
+        super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
+    }
+    
+    @Override
+    public double calcularDeuda(Fecha fechaActual){
+        double deudaTotal = 0;
+        for(int i = 0; i < librosPrestados.size(); i++){
+            deudaTotal+=(fechaActual.getMes()-librosPrestados.get(i).getFechaPrestamo().getMes())*30*10+(fechaActual.getDia()-librosPrestados.get(i).getFechaPrestamo().getDia())*10;
+        }
+        deudaTotal*=.85;
+        deudaTotal+=deudaAcumulada;
+        deudaAcumulada = deudaTotal;
+        return deudaTotal;
+    }
+    
 }

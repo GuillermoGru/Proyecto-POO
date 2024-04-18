@@ -18,12 +18,14 @@ public class Normal extends Usuario{
         super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
     }
     
+    @Override
     public double calcularDeuda(Fecha fechaActual){
         double deudaTotal = 0;
         for(int i = 0; i < librosPrestados.size(); i++){
-            
+            deudaTotal+=(fechaActual.getMes()-librosPrestados.get(i).getFechaPrestamo().getMes())*30*10+(fechaActual.getDia()-librosPrestados.get(i).getFechaPrestamo().getDia())*10;
         }
-        
+        deudaTotal+=deudaAcumulada;
+        deudaAcumulada = deudaTotal;
         return deudaTotal;
     }
     
