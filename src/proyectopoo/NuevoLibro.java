@@ -4,6 +4,8 @@
  */
 package proyectopoo;
 
+import Inventario.*;
+import Inventario.Tipos.Libro;
 import javax.swing.JOptionPane;
 
 /**
@@ -165,11 +167,14 @@ public class NuevoLibro extends javax.swing.JFrame {
         int mes = Integer.parseInt(this.mes.getText());
         int anio = Integer.parseInt(this.anio.getText());
         String descripcion = this.descripcion.getText();
-        int ISSN =  Integer.parseInt(this.anio.getText());
+        String editorial = this.editorial.getText();
+        int ISSN =  Integer.parseInt(this.issn.getText());
         
-        /*String empleado = nombre + ", " +  apellidoP + ", " + apellidoM + ", " + seguroS + ", " + salario;
-        Inicio.listaEmpleados.add(new EmpleadoAsalariado(nombre, apellidoP, apellidoM, seguroS, salario));
-        JOptionPane.showMessageDialog(rootPane, "Empleado asalariado guardado");*/
+        Fecha fecha = new Fecha(dia,mes,anio);
+        Fecha prestamo = new Fecha(0,0,0);
+        //String empleado = nombre + ", " +  apellidoP + ", " + apellidoM + ", " + seguroS + ", " + salario;
+        ProyectoPOO.recursosDisponibles.add(new Libro(titulo, autores, fecha, descripcion, ProyectoPOO.contador++, true, prestamo, editorial,ISSN));
+        JOptionPane.showMessageDialog(rootPane, "Libro guardado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

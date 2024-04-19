@@ -13,8 +13,10 @@ import java.util.ArrayList;
  * @author guillermo
  */
 public class ProyectoPOO {
+    static int contador = 0;
     public static ArrayList<Recurso> recursosDisponibles = new ArrayList<Recurso>();
     public static ArrayList<Usuario> usuariosRegistrados = new ArrayList<Usuario>();
+    
     /**
      * @param args the command line arguments
      */
