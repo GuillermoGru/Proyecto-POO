@@ -14,7 +14,7 @@ import Inventario.Fecha;
  */
 public class Administrativo extends Usuario {
 
-    public Administrativo(int nombre, int claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
+    public Administrativo(String nombre, String claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
         super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
     }
     

@@ -12,31 +12,31 @@ import Inventario.Tipos.*;
  * @author guillermo
  */
 public abstract class Usuario implements Deuda{
-    int nombre;
-    int claveUsuario;
+    String nombre;
+    String claveUsuario;
     ArrayList<Recurso> librosPrestados;
     double deudaAcumulada;
 
-    public Usuario(int nombre, int claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
+    public Usuario(String nombre, String claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
         this.nombre = nombre;
         this.claveUsuario = claveUsuario;
         this.librosPrestados = librosPrestados;
         this.deudaAcumulada = deudaAcumulada;
     }
 
-    public int getNombre() {
+    public String getNombre() {
         return nombre;
     }
 
-    public void setNombre(int nombre) {
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    public int getClaveUsuario() {
+    public String getClaveUsuario() {
         return claveUsuario;
     }
 
-    public void setClaveUsuario(int claveUsuario) {
+    public void setClaveUsuario(String claveUsuario) {
         this.claveUsuario = claveUsuario;
     }
 
