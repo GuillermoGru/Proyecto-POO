@@ -12,8 +12,8 @@ import Inventario.Tipos.*;
  * @author guillermo
  */
 public abstract class Usuario implements Deuda{
-    int nombre;
-    int claveUsuario;
+    String nombre;
+    String claveUsuario;
     ArrayList<Recurso> librosPrestados;
     double deudaAcumulada;
 

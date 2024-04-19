@@ -14,7 +14,7 @@ import java.util.ArrayList;
  */
 public class Normal extends Usuario{
 
-    public Normal(int nombre, int claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
+    public Normal(String nombre, String claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
         super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
     }
     
