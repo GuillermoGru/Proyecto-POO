@@ -4,10 +4,32 @@
  */
 package Inventario.Tipos;
 
+import Inventario.Fecha;
+import Inventario.Recurso;
+
 /**
  *
- * @author guillermo
+ * @author david
  */
-public class Literatura {
+public class Literatura extends Recurso{
+    String editorial;
+
+    public Literatura(String titulo, String autores, Fecha fechaPublicacion, String descripcion, int numSerieLocal, boolean disponible, Fecha fechaPrestamo, String editorial) {
+        super(titulo, autores, fechaPublicacion, descripcion, numSerieLocal, disponible, fechaPrestamo);
+        this.editorial = editorial;
+    }
+
+    public String getEditorial() {
+        return editorial;
+    }
+
+    public void setEditorial(String editorial) {
+        this.editorial = editorial;
+    }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Editorial = " + editorial;
+    } 
     
 }
