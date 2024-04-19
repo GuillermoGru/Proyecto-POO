@@ -3,10 +3,16 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/Usuarios/Normal.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/Usuarios/Administrativo.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/Usuarios/Deuda.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/Usuarios/Usuario.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/ProyectoPOO.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/LogInAdmin.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TablaRecursos.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TablaNormales.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/BibliotecaPrincipalAdministrador.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/BibliotecaPrincipalUsuario.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/MenuPrincipal.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TRecursos.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TNormales.java</file>
+            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/LogInNormal.java</file>
         </group>
     </open-files>
 </project-private>
