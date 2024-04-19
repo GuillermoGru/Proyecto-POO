@@ -26,7 +26,8 @@ public abstract class Recurso {
         this.disponible = disponible;
         this.fechaPrestamo = fechaPrestamo;
     }
-
+    
+    
     public String getTitulo() {
         return titulo;
     }
@@ -92,6 +93,10 @@ public abstract class Recurso {
     
     public String toStringPrestamo(){
          return "Titulo = " + titulo + "Numero de Serie Local = " + numSerieLocal + "Fecha de Prestamo = " + fechaPrestamo;
+    }
+
+    public Object getEditorial() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
     
 }

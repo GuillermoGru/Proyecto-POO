@@ -5,6 +5,8 @@
 package proyectopoo;
 
 import Inventario.Recurso;
+import Usuarios.Administrativo;
+import Usuarios.Normal;
 import Usuarios.Usuario;
 import java.util.ArrayList;
 
@@ -16,6 +18,8 @@ public class ProyectoPOO {
     static int contador = 0;
     public static ArrayList<Recurso> recursosDisponibles = new ArrayList<Recurso>();
     public static ArrayList<Usuario> usuariosRegistrados = new ArrayList<Usuario>();
+    public static ArrayList<Administrativo> admins = new ArrayList<Administrativo>();
+    public static ArrayList<Normal> usuarios = new ArrayList<Normal>();
     
     /**
      * @param args the command line arguments

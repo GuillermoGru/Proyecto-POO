@@ -69,6 +69,11 @@ public class NuevaTesis extends javax.swing.JFrame {
         });
 
         jButton2.setText("Salir");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -167,6 +172,11 @@ public class NuevaTesis extends javax.swing.JFrame {
         ProyectoPOO.recursosDisponibles.add(new Tesis(titulo, autores, fecha, descripcion, ProyectoPOO.contador++, true, prestamo, institucion));
         JOptionPane.showMessageDialog(rootPane, "Tesis guardada");
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        // TODO add your handling code here:
+        this.dispose();
+    }//GEN-LAST:event_jButton2MouseClicked
 
     /**
      * @param args the command line arguments
