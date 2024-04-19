@@ -4,12 +4,17 @@
  */
 package proyectopoo;
 
+import Inventario.Recurso;
+import Usuarios.Usuario;
+import java.util.ArrayList;
+
 /**
  *
  * @author guillermo
  */
 public class ProyectoPOO {
-
+    public static ArrayList<Recurso> recursosDisponibles = new ArrayList<Recurso>();
+    public static ArrayList<Usuario> usuariosRegistrados = new ArrayList<Usuario>();
     /**
      * @param args the command line arguments
      */
