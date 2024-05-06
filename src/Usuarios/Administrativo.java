@@ -17,7 +17,9 @@ public class Administrativo extends Usuario {
     public Administrativo(String nombre, String claveUsuario, ArrayList<Recurso> librosPrestados, double deudaAcumulada) {
         super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
     }
-    
+    public Administrativo(String nombre, String claveUsuario){
+        super(nombre, claveUsuario);
+    }
     @Override
     public double calcularDeuda(Fecha fechaActual){
         double deudaTotal = 0;

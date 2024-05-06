@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
 
+import InicioDeAplicacion.ProyectoPOO;
 import Inventario.Tipos.Libro;
 import Inventario.Tipos.Revista;
 import Inventario.Tipos.Tesis;

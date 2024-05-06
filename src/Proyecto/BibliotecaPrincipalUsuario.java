@@ -2,7 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
+
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  *
@@ -44,7 +48,7 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         jLabel1.setForeground(new java.awt.Color(51, 153, 255));
         jLabel1.setText("BIBLIOTECA DIGITAL");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopoo/fotoBiblio.png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Proyecto/fotoBiblio.png"))); // NOI18N
         jLabel2.setText("jLabel2");
 
         jButton1.setText("Salir");
@@ -138,6 +142,36 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         this.dispose();
+        String entrada;
+        String nombreArchivo = "CuentasAdmin.txt";
+        try{
+            FileWriter fr = new FileWriter(nombreArchivo);
+            BufferedWriter br = new BufferedWriter(fr);            
+            for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.admins.size(); i++){
+                entrada = InicioDeAplicacion.ProyectoPOO.admins.get(i).getNombre() + '@' +  InicioDeAplicacion.ProyectoPOO.admins.get(i).getClaveUsuario() + "\n";
+                br.write(entrada);
+            }
+            
+            br.close();
+        }
+        catch(IOException ex1){
+            System.out.println("Imposible abrir el archivo para escribir");
+        }
+        nombreArchivo = "CuentasNormal.txt";
+        try{
+            FileWriter fr = new FileWriter(nombreArchivo);
+            BufferedWriter br = new BufferedWriter(fr);            
+            for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.usuarios.size(); i++){
+                entrada = InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getNombre() + '@' + InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getClaveUsuario() + "\n";
+                br.write(entrada);
+            }
+            
+            br.close();
+        }
+        catch(IOException ex1){
+            System.out.println("Imposible abrir el archivo para escribir");
+        }
+        
         new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 

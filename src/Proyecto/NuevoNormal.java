@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
 
+import InicioDeAplicacion.ProyectoPOO;
 import Inventario.Recurso;
 import Usuarios.Normal;
 import Usuarios.Usuario;
@@ -135,7 +136,7 @@ public class NuevoNormal extends javax.swing.JFrame {
         ArrayList<Recurso> librosPrestados = new ArrayList<Recurso>();
         double deuda=0;
         ProyectoPOO.usuarios.add(new Normal(nombre, clave, librosPrestados, deuda));
-        JOptionPane.showMessageDialog(rootPane, "Usuario guardada");
+        JOptionPane.showMessageDialog(rootPane, "Usuario guardado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked

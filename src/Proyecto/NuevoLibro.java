@@ -2,22 +2,23 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
 
+import InicioDeAplicacion.ProyectoPOO;
 import Inventario.*;
-import Inventario.Tipos.Revista;
+import Inventario.Tipos.Libro;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author david
  */
-public class NuevaRevista extends javax.swing.JFrame {
+public class NuevoLibro extends javax.swing.JFrame {
 
     /**
      * Creates new form NuevoLibro
      */
-    public NuevaRevista() {
+    public NuevoLibro() {
         initComponents();
     }
 
@@ -46,12 +47,12 @@ public class NuevaRevista extends javax.swing.JFrame {
         descripcion = new javax.swing.JTextField();
         autores = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
-        isbn = new javax.swing.JTextField();
+        issn = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jLabel1.setFont(new java.awt.Font("Verdana", 0, 18)); // NOI18N
-        jLabel1.setText("Nuevo Revista");
+        jLabel1.setText("Nuevo Libro");
 
         jLabel2.setText("Titulo: ");
 
@@ -82,7 +83,7 @@ public class NuevaRevista extends javax.swing.JFrame {
 
         jLabel6.setText("Editorial");
 
-        jLabel7.setText("ISBN");
+        jLabel7.setText("ISSN");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,14 +113,14 @@ public class NuevaRevista extends javax.swing.JFrame {
                             .addComponent(autores, javax.swing.GroupLayout.DEFAULT_SIZE, 265, Short.MAX_VALUE)
                             .addComponent(editorial)
                             .addComponent(descripcion)
-                            .addComponent(isbn)))
+                            .addComponent(issn)))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(119, 119, 119)
                         .addComponent(jButton1)
                         .addGap(103, 103, 103)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(170, 170, 170)
+                        .addGap(195, 195, 195)
                         .addComponent(jLabel1)))
                 .addContainerGap(42, Short.MAX_VALUE))
         );
@@ -153,7 +154,7 @@ public class NuevaRevista extends javax.swing.JFrame {
                 .addGap(29, 29, 29)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel7)
-                    .addComponent(isbn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(issn, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
@@ -173,13 +174,13 @@ public class NuevaRevista extends javax.swing.JFrame {
         int anio = Integer.parseInt(this.anio.getText());
         String descripcion = this.descripcion.getText();
         String editorial = this.editorial.getText();
-        int ISBN =  Integer.parseInt(this.isbn.getText());
+        int ISSN =  Integer.parseInt(this.issn.getText());
         
         Fecha fecha = new Fecha(dia,mes,anio);
         Fecha prestamo = new Fecha(0,0,0);
-        
-        ProyectoPOO.recursosDisponibles.add(new Revista(titulo, autores, fecha, descripcion, ProyectoPOO.contador++, true, prestamo, editorial, ISBN));
-        JOptionPane.showMessageDialog(rootPane, "Revista guardada");
+        //String empleado = nombre + ", " +  apellidoP + ", " + apellidoM + ", " + seguroS + ", " + salario;
+        ProyectoPOO.recursosDisponibles.add(new Libro(titulo, autores, fecha, descripcion, ProyectoPOO.contador++, true, prestamo, editorial,ISSN));
+        JOptionPane.showMessageDialog(rootPane, "Libro guardado");
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -208,21 +209,20 @@ public class NuevaRevista extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(NuevaRevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NuevoLibro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(NuevaRevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NuevoLibro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(NuevaRevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NuevoLibro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(NuevaRevista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(NuevoLibro.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
-        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NuevaRevista().setVisible(true);
+                new NuevoLibro().setVisible(true);
             }
         });
     }
@@ -233,7 +233,7 @@ public class NuevaRevista extends javax.swing.JFrame {
     private javax.swing.JTextField descripcion;
     private javax.swing.JTextField dia;
     private javax.swing.JTextField editorial;
-    private javax.swing.JTextField isbn;
+    private javax.swing.JTextField issn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;

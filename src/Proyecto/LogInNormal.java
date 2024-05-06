@@ -2,18 +2,20 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
+
+import javax.swing.JOptionPane;
 
 /**
  *
  * @author david
  */
-public class LogInAdmin extends javax.swing.JFrame {
+public class LogInNormal extends javax.swing.JFrame {
 
     /**
      * Creates new form LogIn
      */
-    public LogInAdmin() {
+    public LogInNormal() {
         initComponents();
     }
 
@@ -87,7 +89,7 @@ public class LogInAdmin extends javax.swing.JFrame {
                         .addGap(150, 150, 150)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(150, 150, 150)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -110,26 +112,39 @@ public class LogInAdmin extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(42, Short.MAX_VALUE))
+                .addGap(42, 42, 42))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+ 
     private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
-
+ 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        this.dispose();
-        new BibliotecaPrincipalAdministrador().setVisible(true);
+        String nombre = jTextField1.getText();
+        String clave = jTextField2.getText();
+        boolean encontrado = false;
+        for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.usuarios.size(); i++){  
+           if(InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getNombre().equals(nombre) && InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getClaveUsuario().equals(clave)){
+               encontrado = true;
+               break;
+           }
+        }
+        if(encontrado){
+            this.dispose();
+            new BibliotecaPrincipalAdministrador().setVisible(true);
+        }else{
+            JOptionPane.showMessageDialog(rootPane, "Nombre de usuario o clave incorrecta(s)");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
         // TODO add your handling code here:
-       this.dispose();
-       new MenuPrincipal().setVisible(true);
+        this.dispose();
+        new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton2MouseClicked
 
     /**
@@ -149,13 +164,13 @@ public class LogInAdmin extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(LogInAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(LogInAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(LogInAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(LogInAdmin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(LogInNormal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         //</editor-fold>
@@ -163,7 +178,7 @@ public class LogInAdmin extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new LogInAdmin().setVisible(true);
+                new LogInNormal().setVisible(true);
             }
         });
     }

@@ -18,6 +18,10 @@ public class Normal extends Usuario{
         super(nombre, claveUsuario, librosPrestados, deudaAcumulada);
     }
     
+    public Normal(String nombre, String claveUsuario){
+        super(nombre, claveUsuario);
+    }
+    
     @Override
     public double calcularDeuda(Fecha fechaActual){
         double deudaTotal = 0;

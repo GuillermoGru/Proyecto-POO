@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package proyectopoo;
+package Proyecto;
 
 /**
  *
@@ -38,7 +38,7 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("BIBLIOTECA DIGITAL");
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/proyectopoo/imagen (1).png"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Proyecto/imagen (1).png"))); // NOI18N
 
         jButton1.setText("ADMINISTRADOR");
         jButton1.addActionListener(new java.awt.event.ActionListener() {

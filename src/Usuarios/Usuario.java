@@ -23,6 +23,11 @@ public abstract class Usuario implements Deuda{
         this.librosPrestados = librosPrestados;
         this.deudaAcumulada = deudaAcumulada;
     }
+    
+    public Usuario(String nombre, String claveUsuario){
+        this.nombre = nombre;
+        this.claveUsuario = claveUsuario;
+    }
 
     public String getNombre() {
         return nombre;
