@@ -38,6 +38,7 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem1 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
@@ -63,6 +64,11 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         jMenu3.setText("Consultar");
 
         jMenuItem4.setText("Tesis");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuItem5.setText("Libros");
@@ -74,7 +80,20 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         jMenu3.add(jMenuItem5);
 
         jMenuItem6.setText("Revistas");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem6);
+
+        jMenuItem1.setText("Todos");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem1);
 
         jMenuBar1.add(jMenu3);
 
@@ -88,7 +107,7 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem7);
 
-        jMenuItem8.setText("Ver préstamos");
+        jMenuItem8.setText("Ver préstamo");
         jMenu4.add(jMenuItem8);
 
         jMenuBar1.add(jMenu4);
@@ -136,12 +155,13 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        new TablaRecursos().setVisible(true);
+        new TablaLibros().setVisible(true);
+       
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        this.dispose();
+        
         String entrada;
         String nombreArchivo = "CuentasAdmin.txt";
         try{
@@ -171,9 +191,24 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
         catch(IOException ex1){
             System.out.println("Imposible abrir el archivo para escribir");
         }
-        
+        this.dispose();
         new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        // TODO add your handling code here:
+         new TablaRecursos().setVisible(true);
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        new TablaTesis().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        new TablaRevistas().setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -220,6 +255,7 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem4;
     private javax.swing.JMenuItem jMenuItem5;
     private javax.swing.JMenuItem jMenuItem6;

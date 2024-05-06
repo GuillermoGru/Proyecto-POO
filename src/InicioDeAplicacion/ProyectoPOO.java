@@ -70,6 +70,8 @@ public class ProyectoPOO {
             boolean arroba = false;
             while( (entrada = br.readLine()) != null ){
                 arroba = false;
+                nombre = "";
+                clave = "";
                 for(int i = 0; i < entrada.length(); i++){
                     char act = entrada.charAt(i);
                      if(act == '@'){
@@ -83,7 +85,7 @@ public class ProyectoPOO {
                      }
                      
                  }
-                System.out.println(nombre +  ' ' + clave);
+                //System.out.println(nombre +  ' ' + clave);
                 Administrativo nuevoAdmin = new Administrativo(nombre,clave);
                 admins.add(nuevoAdmin);
             }

@@ -5,7 +5,7 @@
 package Proyecto;
 
 import javax.swing.JOptionPane;
-
+import InicioDeAplicacion.ProyectoPOO;
 /**
  *
  * @author david
@@ -128,7 +128,7 @@ public class LogInNormal extends javax.swing.JFrame {
         String clave = jTextField2.getText();
         boolean encontrado = false;
         for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.usuarios.size(); i++){  
-           if(InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getNombre().equals(nombre) && InicioDeAplicacion.ProyectoPOO.usuarios.get(i).getClaveUsuario().equals(clave)){
+           if(ProyectoPOO.usuarios.get(i).getNombre().equals(nombre) && ProyectoPOO.usuarios.get(i).getClaveUsuario().equals(clave)){
                encontrado = true;
                break;
            }

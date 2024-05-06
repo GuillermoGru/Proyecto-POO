@@ -47,6 +47,7 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         jMenuItem4 = new javax.swing.JMenuItem();
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenuItem6 = new javax.swing.JMenuItem();
+        jMenuItem13 = new javax.swing.JMenuItem();
         jMenu4 = new javax.swing.JMenu();
         jMenuItem7 = new javax.swing.JMenuItem();
         jMenuItem8 = new javax.swing.JMenuItem();
@@ -140,6 +141,11 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         jMenu3.setText("Consultar");
 
         jMenuItem4.setText("Tesis");
+        jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem4ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem4);
 
         jMenuItem5.setText("Libros");
@@ -151,7 +157,20 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         jMenu3.add(jMenuItem5);
 
         jMenuItem6.setText("Revistas");
+        jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem6ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem6);
+
+        jMenuItem13.setText("Todos");
+        jMenuItem13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem13ActionPerformed(evt);
+            }
+        });
+        jMenu3.add(jMenuItem13);
 
         jMenuBar1.add(jMenu3);
 
@@ -165,7 +184,7 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem7);
 
-        jMenuItem8.setText("Ver préstamos");
+        jMenuItem8.setText("Ver préstamo");
         jMenu4.add(jMenuItem8);
 
         jMenuBar1.add(jMenu4);
@@ -218,6 +237,8 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         // TODO add your handling code here:
+        new TablaRecursos().setVisible(true);
+        new Prestamo().setVisible(true);
     }//GEN-LAST:event_jMenuItem7ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
@@ -227,7 +248,7 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
         // TODO add your handling code here:
-        new TablaRecursos().setVisible(true);
+        new TablaLibros().setVisible(true);
     }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
@@ -256,7 +277,7 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
-        this.dispose();
+        
         String entrada;
         String nombreArchivo = "CuentasAdmin.txt";
         try{
@@ -286,8 +307,24 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         catch(IOException ex1){
             System.out.println("Imposible abrir el archivo para escribir");
         }
+        this.dispose();
         new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
+        // TODO add your handling code here:
+        new TablaTesis().setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed
+
+    private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
+        // TODO add your handling code here:
+        new TablaRevistas().setVisible(true);
+    }//GEN-LAST:event_jMenuItem6ActionPerformed
+
+    private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
+        // TODO add your handling code here:
+        new TablaRecursos().setVisible(true);
+    }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -338,6 +375,7 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem10;
     private javax.swing.JMenuItem jMenuItem11;
     private javax.swing.JMenuItem jMenuItem12;
+    private javax.swing.JMenuItem jMenuItem13;
     private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JMenuItem jMenuItem3;
     private javax.swing.JMenuItem jMenuItem4;

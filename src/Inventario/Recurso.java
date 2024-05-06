@@ -71,6 +71,7 @@ public abstract class Recurso {
     public boolean isDisponible() {
         return disponible;
     }
+    
 
     public void setDisponible(boolean disponible) {
         this.disponible = disponible;

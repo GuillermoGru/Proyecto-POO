@@ -1,22 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
-    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-<<<<<<< HEAD
-        <group/>
-=======
-        <group>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/ProyectoPOO.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/LogInAdmin.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TablaRecursos.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TablaNormales.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/BibliotecaPrincipalAdministrador.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/BibliotecaPrincipalUsuario.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/MenuPrincipal.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TRecursos.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/TNormales.java</file>
-            <file>file:/home/guillermo/NetBeansProjects/ProyectoPOO/src/proyectopoo/LogInNormal.java</file>
-        </group>
->>>>>>> 7f8337085e42131f6b467e68598057acdaf41508
-    </open-files>
 </project-private>
