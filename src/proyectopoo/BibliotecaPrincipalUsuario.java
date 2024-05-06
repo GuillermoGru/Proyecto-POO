@@ -138,6 +138,7 @@ public class BibliotecaPrincipalUsuario extends javax.swing.JFrame {
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         // TODO add your handling code here:
         this.dispose();
+        new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
