@@ -4,6 +4,7 @@
  */
 package Proyecto;
 
+import Excepciones.LogInException;
 import javax.swing.JOptionPane;
 
 /**
@@ -128,17 +129,21 @@ public class LogInAdmin extends javax.swing.JFrame {
         String nombre = jTextField1.getText();
         String clave = jTextField2.getText();
         boolean encontrado = false;
-        for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.admins.size(); i++){  
-           if(InicioDeAplicacion.ProyectoPOO.admins.get(i).getNombre().equals(nombre) && InicioDeAplicacion.ProyectoPOO.admins.get(i).getClaveUsuario().equals(clave)){
-               encontrado = true;
-               break;
-           }
-        }
-        if(encontrado){
-            this.dispose();
-            new BibliotecaPrincipalAdministrador().setVisible(true);
-        }else{
-             JOptionPane.showMessageDialog(rootPane, "Nombre de usuario o clave incorrecta(s)");  
+        try{
+            for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.admins.size(); i++){  
+                if(InicioDeAplicacion.ProyectoPOO.admins.get(i).getNombre().equals(nombre) && InicioDeAplicacion.ProyectoPOO.admins.get(i).getClaveUsuario().equals(clave)){
+                    encontrado = true;
+                    break;
+                }
+             }
+             if(encontrado){
+                 this.dispose();
+                 new BibliotecaPrincipalAdministrador().setVisible(true);
+             }else{
+                 throw new LogInException();  
+             }
+        }catch(LogInException e1){
+            JOptionPane.showMessageDialog(rootPane, "Nombre de usuario o clave incorrecta(s)");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 

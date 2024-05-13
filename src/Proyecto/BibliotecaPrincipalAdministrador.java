@@ -4,6 +4,8 @@
  */
 package Proyecto;
 
+import InicioDeAplicacion.ProyectoPOO;
+import Inventario.Tipos.*;
 import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -307,6 +309,20 @@ public class BibliotecaPrincipalAdministrador extends javax.swing.JFrame {
         catch(IOException ex1){
             System.out.println("Imposible abrir el archivo para escribir");
         }
+        nombreArchivo = "RecursosDisponibles.txt";
+        /*try{
+            FileWriter fr = new FileWriter(nombreArchivo);
+            BufferedWriter br = new BufferedWriter(fr);            
+            for(int i = 0; i < InicioDeAplicacion.ProyectoPOO.recursosDisponibles.size(); i++){
+                entrada = ProyectoPOO.recursosDisponibles.get(i).getAutores() + '@' + ProyectoPOO.recursosDisponibles.get(i).getDescripcion() + '@' + ProyectoPOO.recursosDisponibles.get(i).getTitulo() + '@' + ProyectoPOO.recursosDisponibles.get(i).getEditorial() + '@' + ProyectoPOO.recursosDisponibles.get(i).getFechaPrestamo().getAnio() + '@' + ProyectoPOO.recursosDisponibles.get(i).getFechaPrestamo().getDia() + '@' + ProyectoPOO.recursosDisponibles.get(i).getFechaPrestamo().getMes() + '@' + ProyectoPOO.recursosDisponibles.get(i).getFechaPublicacion().getAnio() + '@' + ProyectoPOO.recursosDisponibles.get(i)+  "\n";
+                br.write(entrada);
+            }
+            
+            br.close();
+        }
+        catch(IOException ex1){
+            System.out.println("Imposible abrir el archivo para escribir");
+        }*/
         this.dispose();
         new MenuPrincipal().setVisible(true);
     }//GEN-LAST:event_jButton1MouseClicked
